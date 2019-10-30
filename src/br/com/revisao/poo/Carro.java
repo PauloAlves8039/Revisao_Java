@@ -9,4 +9,7 @@ package br.com.revisao.poo;
 
 public class Carro extends VeiculoBase {
 	
+	public Carro() {
+		this.quantidadeRodas = 4;
+	}
 }
