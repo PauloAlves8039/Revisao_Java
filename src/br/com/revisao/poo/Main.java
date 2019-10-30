@@ -11,7 +11,7 @@ public class Main {
 	public static void main(String[] args) {
 		try {
 			System.out.println("***** INFORMAÇÕES DO VEÍCULO *****");
-			VeiculoBase v1 = new VeiculoBase();
+			Carro v1 = new Carro();
 			v1.setMarca("GM");
 			v1.setModelo("Corsa");
 			v1.setChassi("ABCDE");
