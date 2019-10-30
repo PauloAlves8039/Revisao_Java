@@ -6,6 +6,8 @@
 */
 package br.com.revisao.poo;
 
+import br.com.revisao.execoes.ChassiInvalidoException;
+
 public class VeiculoBase {
 	
 	// Atributos
@@ -44,7 +46,7 @@ public class VeiculoBase {
 		if(chassi.length() == 5) {
 			this.chassi = chassi;
 		}else {
-			throw new Exception("O chassi informado é inválido!");
+			throw new ChassiInvalidoException(chassi);
 		}		
 	}
 

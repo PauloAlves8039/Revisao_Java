@@ -17,6 +17,7 @@ public class Main {
 			v1.setChassi("ABCDE");
 			System.out.println("A marca do veículo é: " + v1.getMarca());
 			System.out.println("O modelo do veículo é: " + v1.getModelo());
+			System.out.println("O chassi do veículo é: " + v1.getChassi());
 			System.out.println("===== ESTADO DO VEÍCULO =====");
 			v1.desligar();
 			v1.abastecer(15.0f);
