@@ -14,7 +14,7 @@ public class VeiculoBase {
 	private String modelo;
 	private String marca;
 	private String chassi;
-	private int quantidadeRodas;
+	protected int quantidadeRodas;
 	private float quantidadeCombustivel;
 	
 	// Construtor default
@@ -52,10 +52,6 @@ public class VeiculoBase {
 
 	public int getQuantidadeRodas() {
 		return quantidadeRodas;
-	}
-
-	public void setQuantidadeRodas(int quantidadeRodas) {
-		this.quantidadeRodas = quantidadeRodas;
 	}
 
 	public float getQuantidadeCombustivel() {
