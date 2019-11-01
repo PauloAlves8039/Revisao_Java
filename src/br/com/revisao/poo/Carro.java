@@ -12,4 +12,10 @@ public class Carro extends VeiculoBase {
 	public Carro() {
 		this.quantidadeRodas = 4;
 	}
+	
+	public Carro(String modelo, String marca) {
+		this.quantidadeRodas = 4;
+		this.setModelo(modelo);
+		this.setMarca(marca);
+	}
 }
