@@ -4,6 +4,7 @@
  * Descrição: classe de modelo para exibir informações básicas do objeto veículo
  * Data: 26/10/2019
 */
+
 package br.com.revisao.poo;
 
 import br.com.revisao.execoes.ChassiInvalidoException;
