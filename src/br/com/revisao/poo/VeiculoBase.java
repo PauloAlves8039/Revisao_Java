@@ -10,18 +10,20 @@ package br.com.revisao.poo;
 import br.com.revisao.execoes.ChassiInvalidoException;
 
 public class VeiculoBase {
-	
+
 	// Atributos
 	private String modelo;
 	private String marca;
 	private String chassi;
 	protected int quantidadeRodas;
 	private float quantidadeCombustivel;
-	
-	// Construtor default
+	private Boolean ligado;
+
+	// Construtor 
 	public VeiculoBase() {
+		this.ligado = true;
 	}
-	
+
 	// Métodos assessores get e set
 	public String getModelo() {
 		return modelo;
@@ -44,11 +46,11 @@ public class VeiculoBase {
 	}
 
 	public void setChassi(String chassi) throws Exception {
-		if(chassi.length() == 5) {
+		if (chassi.length() == 5) {
 			this.chassi = chassi;
-		}else {
+		} else {
 			throw new ChassiInvalidoException(chassi);
-		}		
+		}
 	}
 
 	public int getQuantidadeRodas() {
@@ -59,16 +61,18 @@ public class VeiculoBase {
 		return quantidadeCombustivel;
 	}
 
-	public void setQuantidadeCombustivel(float quantidadeCombustivel) {
-		this.quantidadeCombustivel = quantidadeCombustivel;
+	public Boolean isLigado() {
+		return ligado;
 	}
-	
+
 	// Métodos para ações básicas do veículo
 	public void ligar() {
+		this.ligado = true;
 		System.out.println("O veículo ligou!");
 	}
 
 	public void desligar() {
+		this.ligado = false;
 		System.out.println("O veículo desligou!");
 	}
 

@@ -52,8 +52,22 @@ public class Main {
 			System.out.println("===== ESTADO DO VEÍCULO =====");
 			m1.ligar();
 			m1.abastecer(16.5f);
-			System.out.println("O veículo " + m1.getModelo() + " está abastecido com " + m1.getQuantidadeCombustivel()
-					+ " litros!");
+			System.out.println("O veículo " + m1.getModelo() + " está abastecido com " + m1.getQuantidadeCombustivel() + " litros!");
+			
+			System.out.println("==============================");
+
+			Moto m2 = new Moto("FAZER 150 UBS", "Yamaha");
+			m2.setChassi("PQRST");
+			System.out.println("A marca do veículo é: " + m2.getMarca());
+			System.out.println("O modelo do veículo é: " + m2.getModelo());
+			System.out.println("O chassi do veículo é: " + m2.getChassi());
+			System.out.println(String.format("O veículo %s está ligado? %b ", m2.getModelo(), m2.isLigado()));
+			System.out.println("O veículo possui " + m2.getQuantidadeRodas() + " rodas.");
+
+			System.out.println("===== ESTADO DO VEÍCULO =====");
+			m2.ligar();
+			m2.abastecer(14.7f);
+			System.out.println("O veículo " + m2.getModelo() + " está abastecido com " + m2.getQuantidadeCombustivel() + " litros!");			
 		} catch (Exception e) {
 			System.out.println("##### Ocorreu o seguinte erro: " + e.getMessage());
 		}
