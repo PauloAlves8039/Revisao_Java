@@ -7,6 +7,9 @@
 
 package br.com.revisao.poo;
 
+import br.com.revisao.execoes.AbastecimentoException;
+import br.com.revisao.execoes.ChassiInvalidoException;
+
 public class Main {
 
 	public static void main(String[] args) {
@@ -54,7 +57,7 @@ public class Main {
 			System.out.println("O veículo possui " + m1.getQuantidadeRodas() + " rodas.");
 
 			System.out.println("===== ESTADO DO VEÍCULO =====");
-			m1.ligar();
+			m1.desligar();
 			m1.abastecer(16.5f);
 			System.out.println("O veículo " + m1.getModelo() + " está abastecido com " + m1.getQuantidadeCombustivel() + " litros!");
 			
@@ -70,10 +73,14 @@ public class Main {
 			System.out.println("O veículo possui " + m2.getQuantidadeRodas() + " rodas.");
 
 			System.out.println("===== ESTADO DO VEÍCULO =====");
-			m2.ligar();
+			m2.desligar();
 			m2.abastecer(14.7f);
 			System.out.println("O veículo " + m2.getModelo() + " está abastecido com " + m2.getQuantidadeCombustivel() + " litros!");			
-		} catch (Exception e) {
+		}catch(AbastecimentoException e) {
+			System.out.println("Você não pode abastecer o veículo enquanto estiver ligado.");
+		}catch(ChassiInvalidoException e) {
+			System.out.println("Ocorre o seguinte erro na validação do chassi: " + e.getMessage());
+		}catch (Exception e) {
 			System.out.println("##### Ocorreu o seguinte erro: " + e.getMessage());
 		}
 	}

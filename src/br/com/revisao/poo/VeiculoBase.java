@@ -7,6 +7,7 @@
 
 package br.com.revisao.poo;
 
+import br.com.revisao.execoes.AbastecimentoException;
 import br.com.revisao.execoes.ChassiInvalidoException;
 
 public class VeiculoBase {
@@ -45,7 +46,7 @@ public class VeiculoBase {
 		return chassi;
 	}
 
-	public void setChassi(String chassi) throws Exception {
+	public void setChassi(String chassi) throws ChassiInvalidoException {
 		if (chassi.length() == 5) {
 			this.chassi = chassi;
 		} else {
@@ -76,7 +77,11 @@ public class VeiculoBase {
 		System.out.println("O veículo desligou!");
 	}
 
-	public void abastecer(float litros) {
-		quantidadeCombustivel += litros;
+	public void abastecer(float litros) throws AbastecimentoException {
+		if(!this.ligado) {
+			quantidadeCombustivel += litros;
+		}else {
+			throw new AbastecimentoException();
+		}		
 	}
 }
