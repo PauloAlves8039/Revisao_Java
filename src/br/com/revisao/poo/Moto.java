@@ -9,9 +9,20 @@ package br.com.revisao.poo;
 
 public class Moto extends VeiculoBase {
 	
-	public Moto(String modelo, String marca) {
+	private int cilindrada;
+	
+	public Moto(String modelo, String marca, int cilindrada) {
 		this.quantidadeRodas = 2;
 		this.setModelo(modelo);
 		this.setMarca(marca);
+		this.setCilindrada(cilindrada);
+	}
+
+	public int getCilindrada() {
+		return cilindrada;
+	}
+
+	public void setCilindrada(int cilindrada) {
+		this.cilindrada = cilindrada;
 	}
 }

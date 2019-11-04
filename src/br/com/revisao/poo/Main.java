@@ -17,9 +17,11 @@ public class Main {
 			v1.setMarca("GM");
 			v1.setModelo("Corsa");
 			v1.setChassi("ABCDE");
+			v1.setQuantidadePortas(4);
 			System.out.println("A marca do veículo é: " + v1.getMarca());
 			System.out.println("O modelo do veículo é: " + v1.getModelo());
 			System.out.println("O chassi do veículo é: " + v1.getChassi());
+			System.out.println("O veículo possui " + v1.getQuantidadePortas() + " portas.");
 			System.out.println("O veículo possui " + v1.getQuantidadeRodas() + " rodas.");
 			System.out.println("===== ESTADO DO VEÍCULO =====");
 			v1.desligar();
@@ -28,11 +30,12 @@ public class Main {
 
 			System.out.println("==============================");
 
-			Carro v2 = new Carro("Crossfox", "Wolkswagen");
+			Carro v2 = new Carro("Crossfox", "Wolkswagen", 4);
 			v2.setChassi("FGHIJ");
 			System.out.println("A marca do veículo é: " + v2.getMarca());
 			System.out.println("O modelo do veículo é: " + v2.getModelo());
 			System.out.println("O chassi do veículo é: " + v2.getChassi());
+			System.out.println("O veículo possui " + v2.getQuantidadePortas() + " portas.");
 			System.out.println("O veículo possui " + v2.getQuantidadeRodas() + " rodas.");
 
 			System.out.println("===== ESTADO DO VEÍCULO =====");
@@ -42,11 +45,12 @@ public class Main {
 
 			System.out.println("==============================");
 
-			Moto m1 = new Moto("CB Twister", "Honda");
+			Moto m1 = new Moto("CB Twister", "Honda", 250);
 			m1.setChassi("KLMNO");
 			System.out.println("A marca do veículo é: " + m1.getMarca());
 			System.out.println("O modelo do veículo é: " + m1.getModelo());
 			System.out.println("O chassi do veículo é: " + m1.getChassi());
+			System.out.println("O veículo possui " + m1.getCilindrada() + " cilindradas");
 			System.out.println("O veículo possui " + m1.getQuantidadeRodas() + " rodas.");
 
 			System.out.println("===== ESTADO DO VEÍCULO =====");
@@ -56,11 +60,12 @@ public class Main {
 			
 			System.out.println("==============================");
 
-			Moto m2 = new Moto("FAZER 150 UBS", "Yamaha");
+			Moto m2 = new Moto("FAZER 150 UBS", "Yamaha", 150);
 			m2.setChassi("PQRST");
 			System.out.println("A marca do veículo é: " + m2.getMarca());
 			System.out.println("O modelo do veículo é: " + m2.getModelo());
 			System.out.println("O chassi do veículo é: " + m2.getChassi());
+			System.out.println("O veículo possui " + m2.getCilindrada() + " cilindradas");
 			System.out.println(String.format("O veículo %s está ligado? %b ", m2.getModelo(), m2.isLigado()));
 			System.out.println("O veículo possui " + m2.getQuantidadeRodas() + " rodas.");
 

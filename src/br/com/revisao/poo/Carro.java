@@ -9,13 +9,24 @@ package br.com.revisao.poo;
 
 public class Carro extends VeiculoBase {
 	
+	private int quantidadePortas;
+	
 	public Carro() {
 		this.quantidadeRodas = 4;
 	}
 	
-	public Carro(String modelo, String marca) {
+	public Carro(String modelo, String marca, int quantidadePortas) {
 		this.quantidadeRodas = 4;
 		this.setModelo(modelo);
 		this.setMarca(marca);
+		this.setQuantidadePortas(quantidadePortas);
+	}
+	
+	public int getQuantidadePortas() {
+		return quantidadePortas;
+	}
+
+	public void setQuantidadePortas(int quantidadePortas) {
+		this.quantidadePortas = quantidadePortas;
 	}
 }
