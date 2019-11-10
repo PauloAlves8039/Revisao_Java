@@ -21,7 +21,7 @@ public class VeiculoBase {
 	protected int quantidadeRodas;
 	private float quantidadeCombustivel;
 	private Boolean ligado;
-	private float velocidade;
+	protected float velocidade;
 
 	// Construtor 
 	public VeiculoBase() {

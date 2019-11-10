@@ -7,6 +7,9 @@
 
 package br.com.revisao.poo;
 
+import br.com.revisao.execoes.AceleracaoVeiculoException;
+import br.com.revisao.execoes.FrenagemVeiculoException;
+
 public class Moto extends VeiculoBase {
 	
 	private int cilindrada;
@@ -24,5 +27,23 @@ public class Moto extends VeiculoBase {
 
 	public void setCilindrada(int cilindrada) {
 		this.cilindrada = cilindrada;
+	}
+	
+	@Override
+	public void acelerar() throws AceleracaoVeiculoException{
+		if(this.isLigado()) {
+			this.velocidade += 3;
+		}else {
+			throw new AceleracaoVeiculoException();
+		}
+	}
+	
+	@Override
+	public void frear() throws FrenagemVeiculoException {
+		if(this.isLigado()) {
+			this.velocidade -= 3;
+		}else {
+			throw new FrenagemVeiculoException();
+		}
 	}
 }

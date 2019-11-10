@@ -58,9 +58,10 @@ public class Main {
 			System.out.println("O veículo possui " + m1.getQuantidadeRodas() + " rodas.");
 
 			System.out.println("===== ESTADO DO VEÍCULO =====");
-			m1.desligar();
-			m1.abastecer(16.5f);
-			System.out.println("O veículo " + m1.getModelo() + " está abastecido com " + m1.getQuantidadeCombustivel() + " litros!");
+			m1.acelerar();
+			System.out.println(String.format("A velocidade atual do veículo é: %f Km", m1.getVelocidade()));
+			m1.frear();
+			System.out.println(String.format("A velocidade atual do veículo é: %f Km", m1.getVelocidade()));
 			
 			System.out.println("==============================");
 
