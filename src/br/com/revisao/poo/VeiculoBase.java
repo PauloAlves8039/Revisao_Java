@@ -8,7 +8,9 @@
 package br.com.revisao.poo;
 
 import br.com.revisao.execoes.AbastecimentoException;
+import br.com.revisao.execoes.AceleracaoVeiculoException;
 import br.com.revisao.execoes.ChassiInvalidoException;
+import br.com.revisao.execoes.FrenagemVeiculoException;
 
 public class VeiculoBase {
 
@@ -19,10 +21,12 @@ public class VeiculoBase {
 	protected int quantidadeRodas;
 	private float quantidadeCombustivel;
 	private Boolean ligado;
+	private float velocidade;
 
 	// Construtor 
 	public VeiculoBase() {
 		this.ligado = true;
+		this.velocidade = 0;
 	}
 
 	// Métodos assessores get e set
@@ -65,15 +69,21 @@ public class VeiculoBase {
 	public Boolean isLigado() {
 		return ligado;
 	}
+	
+	public float getVelocidade() {
+		return velocidade;
+	}
 
 	// Métodos para ações básicas do veículo
 	public void ligar() {
 		this.ligado = true;
+		this.velocidade = 0;
 		System.out.println("O veículo ligou!");
 	}
 
 	public void desligar() {
 		this.ligado = false;
+		this.velocidade = 0;
 		System.out.println("O veículo desligou!");
 	}
 
@@ -83,5 +93,21 @@ public class VeiculoBase {
 		}else {
 			throw new AbastecimentoException();
 		}		
+	}
+	
+	public void acelerar() throws AceleracaoVeiculoException {
+		if(this.ligado) {
+			this.velocidade += 10;
+		}else {
+			throw new AceleracaoVeiculoException();
+		}
+	}
+	
+	public void frear() throws FrenagemVeiculoException {
+		if(this.ligado) {
+			this.velocidade -= 10;
+		}else {
+			throw new FrenagemVeiculoException();
+		}
 	}
 }

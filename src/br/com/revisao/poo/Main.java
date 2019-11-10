@@ -27,10 +27,11 @@ public class Main {
 			System.out.println("O veículo possui " + v1.getQuantidadePortas() + " portas.");
 			System.out.println("O veículo possui " + v1.getQuantidadeRodas() + " rodas.");
 			System.out.println("===== ESTADO DO VEÍCULO =====");
-			v1.desligar();
-			v1.abastecer(15.0f);
-			System.out.println("O veículo " + v1.getModelo() + " está abastecido com " + v1.getQuantidadeCombustivel() + " litros!");
-
+			v1.acelerar();
+			System.out.println(String.format("A velocidade atual do veículo é: %f Km", v1.getVelocidade()));
+			v1.frear();
+			System.out.println(String.format("A velocidade atual do veículo é: %f Km", v1.getVelocidade()));
+			
 			System.out.println("==============================");
 
 			Carro v2 = new Carro("Crossfox", "Wolkswagen", 4);
