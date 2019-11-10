@@ -46,4 +46,9 @@ public final class Moto extends VeiculoBase {
 			throw new FrenagemVeiculoException();
 		}
 	}
+
+	@Override
+	public void preparar() {
+		System.out.println("Colocar o capacete.");		
+	}
 }

@@ -26,7 +26,11 @@ public class Main {
 			System.out.println("O chassi do veículo é: " + v1.getChassi());
 			System.out.println("O veículo possui " + v1.getQuantidadePortas() + " portas.");
 			System.out.println("O veículo possui " + v1.getQuantidadeRodas() + " rodas.");
+			v1.preparar();
+			
 			System.out.println("===== ESTADO DO VEÍCULO =====");
+			
+			v1.ligar();			
 			v1.acelerar();
 			System.out.println(String.format("A velocidade atual do veículo é: %f Km", v1.getVelocidade()));
 			v1.frear();
@@ -43,6 +47,7 @@ public class Main {
 			System.out.println("O veículo possui " + v2.getQuantidadeRodas() + " rodas.");
 
 			System.out.println("===== ESTADO DO VEÍCULO =====");
+			
 			v2.desligar();
 			v2.abastecer(18.0f);
 			System.out.println("O veículo " + v2.getModelo() + " está abastecido com " + v2.getQuantidadeCombustivel() + " litros!");
@@ -56,8 +61,11 @@ public class Main {
 			System.out.println("O chassi do veículo é: " + m1.getChassi());
 			System.out.println("O veículo possui " + m1.getCilindrada() + " cilindradas");
 			System.out.println("O veículo possui " + m1.getQuantidadeRodas() + " rodas.");
-
+			m1.preparar();
+			
 			System.out.println("===== ESTADO DO VEÍCULO =====");
+			
+			m1.ligar();
 			m1.acelerar();
 			System.out.println(String.format("A velocidade atual do veículo é: %f Km", m1.getVelocidade()));
 			m1.frear();

@@ -12,7 +12,7 @@ import br.com.revisao.execoes.AceleracaoVeiculoException;
 import br.com.revisao.execoes.ChassiInvalidoException;
 import br.com.revisao.execoes.FrenagemVeiculoException;
 
-public class VeiculoBase {
+public abstract class VeiculoBase {
 
 	// Atributos
 	private String modelo;
@@ -110,4 +110,6 @@ public class VeiculoBase {
 			throw new FrenagemVeiculoException();
 		}
 	}
+	
+	public abstract void preparar();
 }
