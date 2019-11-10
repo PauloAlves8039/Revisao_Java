@@ -10,7 +10,7 @@ package br.com.revisao.poo;
 import br.com.revisao.execoes.AceleracaoVeiculoException;
 import br.com.revisao.execoes.FrenagemVeiculoException;
 
-public class Moto extends VeiculoBase {
+public final class Moto extends VeiculoBase {
 	
 	private int cilindrada;
 	

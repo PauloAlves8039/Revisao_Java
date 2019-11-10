@@ -7,7 +7,7 @@
 
 package br.com.revisao.poo;
 
-public class Carro extends VeiculoBase {
+public final class Carro extends VeiculoBase {
 	
 	private int quantidadePortas;
 	
