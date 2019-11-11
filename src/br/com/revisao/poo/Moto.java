@@ -58,7 +58,7 @@ public final class Moto extends VeiculoBase {
 	}
 
 	@Override
-	public void manutacao() {
-		System.out.println("O vaículo se emcontra em manutenção.");		
+	public void manutencao() {
+		System.out.println("O veículo se encontra em manutenção.");		
 	}
 }

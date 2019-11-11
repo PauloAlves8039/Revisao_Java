@@ -87,7 +87,7 @@ public class Main {
 			
 			m2.desligar();
 			m2.abastecer(14.7f);
-			m2.manutacao();
+			m2.manutencao();
 			System.out.println("O veículo " + m2.getModelo() + " está abastecido com " + m2.getQuantidadeCombustivel() + " litros!");			
 		}catch(AbastecimentoException e) {
 			System.out.println("Você não pode abastecer o veículo enquanto estiver ligado.");

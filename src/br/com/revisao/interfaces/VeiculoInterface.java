@@ -10,5 +10,5 @@ package br.com.revisao.interfaces;
 public interface VeiculoInterface {
 	
 	void revisar();
-	void manutacao();
+	void manutencao();
 }

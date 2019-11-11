@@ -41,7 +41,7 @@ public final class Carro extends VeiculoBase {
 	}
 
 	@Override
-	public void manutacao() {
-		System.out.println("O veículo se encontra em manutenção.");		
+	public void manutencao() {
+		System.out.println("O veículo se encontra em manutenção.");			
 	}
 }
