@@ -51,4 +51,14 @@ public final class Moto extends VeiculoBase {
 	public void preparar() {
 		System.out.println("Colocar o capacete.");		
 	}
+
+	@Override
+	public void revisar() {
+		System.out.println("O veículo de encontra em revisão.");		
+	}
+
+	@Override
+	public void manutacao() {
+		System.out.println("O vaículo se emcontra em manutenção.");		
+	}
 }

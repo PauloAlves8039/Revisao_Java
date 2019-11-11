@@ -50,6 +50,7 @@ public class Main {
 			
 			v2.desligar();
 			v2.abastecer(18.0f);
+			v2.revisar();
 			System.out.println("O veículo " + v2.getModelo() + " está abastecido com " + v2.getQuantidadeCombustivel() + " litros!");
 
 			System.out.println("==============================");
@@ -83,8 +84,10 @@ public class Main {
 			System.out.println("O veículo possui " + m2.getQuantidadeRodas() + " rodas.");
 
 			System.out.println("===== ESTADO DO VEÍCULO =====");
+			
 			m2.desligar();
 			m2.abastecer(14.7f);
+			m2.manutacao();
 			System.out.println("O veículo " + m2.getModelo() + " está abastecido com " + m2.getQuantidadeCombustivel() + " litros!");			
 		}catch(AbastecimentoException e) {
 			System.out.println("Você não pode abastecer o veículo enquanto estiver ligado.");

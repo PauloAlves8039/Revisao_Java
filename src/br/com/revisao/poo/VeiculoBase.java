@@ -11,8 +11,9 @@ import br.com.revisao.execoes.AbastecimentoException;
 import br.com.revisao.execoes.AceleracaoVeiculoException;
 import br.com.revisao.execoes.ChassiInvalidoException;
 import br.com.revisao.execoes.FrenagemVeiculoException;
+import br.com.revisao.interfaces.VeiculoInterface;
 
-public abstract class VeiculoBase {
+public abstract class VeiculoBase implements VeiculoInterface {
 
 	// Atributos
 	private String modelo;

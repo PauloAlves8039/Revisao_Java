@@ -34,4 +34,14 @@ public final class Carro extends VeiculoBase {
 	public void preparar() {
 		System.out.println("Colocar o cinto de segurança.");		
 	}
+
+	@Override
+	public void revisar() {
+		System.out.println("O veículo de encontra em revisão.");		
+	}
+
+	@Override
+	public void manutacao() {
+		System.out.println("O veículo se encontra em manutenção.");		
+	}
 }
