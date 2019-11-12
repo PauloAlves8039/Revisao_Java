@@ -14,23 +14,28 @@ import br.com.revisao.estruturadados.Pessoa;
 public class Main {
 
 	public static void main(String[] args) {
-		
+
 		Scanner input = new Scanner(System.in);
-		
-		System.out.println("Digite a opção desejada: ");
+
+		System.out.println("========== OPÇÕES ==========");
 		System.out.println("1. Gerenciamento de memória");
-		int opcao = input.nextInt();
 		
-		switch(opcao) {
+		System.out.print("Digite a opção desejada: ");
+		int opcao = input.nextInt();
+
+		System.out.println("========== RESULTADO ==========");
+
+		switch (opcao) {
 		case 1:
 			gerenciamentoMemoria();
 			break;
 		}
-		
+
 		input.close();
 	}
-	
-	static void gerenciamentoMemoria() {
+
+	private static void gerenciamentoMemoria() {
+		System.out.println("***** GERENCIAMENTO DE MEMÓRIA *****");
 		int a = 3;
 		System.out.println(a);
 		int b = a;
@@ -51,5 +56,4 @@ public class Main {
 		System.out.println(p2.toString());
 		System.out.println(p1.equals(p2));
 	}
-
 }
