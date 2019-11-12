@@ -5,7 +5,7 @@
  * Data: 10/11/2019
 */
 
-package br.com.revisao.estruturadados.modelos;
+package br.com.revisao.estruturadados;
 
 public class Pessoa {
 

@@ -9,7 +9,7 @@ package br.com.revisao.estruturadados;
 
 import java.util.Scanner;
 
-import br.com.revisao.estruturadados.modelos.Pessoa;
+import br.com.revisao.estruturadados.Pessoa;
 
 public class Main {
 
