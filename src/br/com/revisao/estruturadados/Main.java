@@ -43,13 +43,13 @@ public class Main {
 		System.out.println("********************");
 		Pessoa p1 = new Pessoa(1, "Paulo");
 		System.out.println(p1.toString());
-		Pessoa p2 = p1;
+		Pessoa p2 = new Pessoa(1, "Paulo");
 		System.out.println(p2.toString());
 		System.out.println("--------------------");
 		p2.setNome("Pedro");
 		System.out.println(p1.toString());
 		System.out.println(p2.toString());
-		System.out.println(p1 == p2);
+		System.out.println(p1.equals(p2));
 	}
 
 }
