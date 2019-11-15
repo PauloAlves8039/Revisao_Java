@@ -7,6 +7,8 @@
 
 package br.com.revisao.estruturadados;
 
+import java.util.Arrays;
+
 public class Vetor<T> {
 	
 	private Object[] elementos;
@@ -23,12 +25,15 @@ public class Vetor<T> {
 	}
 	
 	public void inserir(T elemento) {
+		if(this.posicao >= this.elementos.length) {
+			this.elementos = Arrays.copyOf(this.elementos, this.elementos.length + 1);
+		}
 		this.elementos[this.posicao] = elemento;
 		this.posicao++;
 	}
 	
 	public void inserirEm(int posicao, T elemento) {
-		if(posicao < this.elementos.length) {
+		if(posicao > this.elementos.length) {
 			throw new IllegalArgumentException(String.format("A posição é inválida [%d]", posicao));
 		}
 		this.elementos[posicao] = elemento;
@@ -37,5 +42,10 @@ public class Vetor<T> {
 	@SuppressWarnings("unchecked")
 	public T recuperar(int posicao) {
 		return (T)this.elementos[posicao];
+	}
+
+	@Override
+	public String toString() {
+		return "Vetor [elementos=" + Arrays.toString(elementos) + "]";
 	}
 }

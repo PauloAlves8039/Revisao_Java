@@ -62,12 +62,11 @@ public class Main {
 	}
 
 	private static void inserirVetor() {
-		Vetor<Pessoa> vetorPessoas = new Vetor<Pessoa>(3);
-		vetorPessoas.inserirEm(0, new Pessoa(1, "Fernando"));
-		System.out.println(vetorPessoas.recuperar(0).getNome());
+		Vetor<Pessoa> vetorPessoas = new Vetor<Pessoa>();
+		vetorPessoas.inserir(new Pessoa(1, "Isadora"));
+		vetorPessoas.inserir(new Pessoa(2, "Juliana"));
+		vetorPessoas.inserir(new Pessoa(3, "Adriana"));
+		System.out.println(vetorPessoas);
 		
-		Vetor<Integer> vetorInteiros = new Vetor<Integer>(2);
-		vetorInteiros.inserirEm(0, 1);
-		System.out.println(vetorInteiros.recuperar(0));
 	}
 }
