@@ -19,7 +19,8 @@ public class Main {
 
 		System.out.println("========== OPÇÕES ==========");
 		System.out.println("1. Gerenciamento de memória");
-		
+		System.out.println("2. Inserir vetor");
+
 		System.out.print("Digite a opção desejada: ");
 		int opcao = input.nextInt();
 
@@ -28,6 +29,9 @@ public class Main {
 		switch (opcao) {
 		case 1:
 			gerenciamentoMemoria();
+			break;
+		case 2:
+			inserirVetor();
 			break;
 		}
 
@@ -55,5 +59,15 @@ public class Main {
 		System.out.println(p1.toString());
 		System.out.println(p2.toString());
 		System.out.println(p1.equals(p2));
+	}
+
+	private static void inserirVetor() {
+		Vetor<Pessoa> vetorPessoas = new Vetor<Pessoa>(3);
+		vetorPessoas.inserirEm(0, new Pessoa(1, "Fernando"));
+		System.out.println(vetorPessoas.recuperar(0).getNome());
+		
+		Vetor<Integer> vetorInteiros = new Vetor<Integer>(2);
+		vetorInteiros.inserirEm(0, 1);
+		System.out.println(vetorInteiros.recuperar(0));
 	}
 }
