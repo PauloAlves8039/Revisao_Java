@@ -64,8 +64,10 @@ public class Main {
 	private static void inserirVetor() {
 		Vetor<Pessoa> vetorPessoas = new Vetor<Pessoa>();
 		vetorPessoas.inserir(new Pessoa(1, "Isadora"));
-		vetorPessoas.inserir(new Pessoa(2, "Juliana"));
+		vetorPessoas.inserir(new Pessoa(2, "Juliano"));
 		vetorPessoas.inserir(new Pessoa(3, "Adriana"));
+		vetorPessoas.inserir(new Pessoa(4, "Bruno"));
+		vetorPessoas.inserirEm(1, new Pessoa(5, "Karla"));
 		System.out.println(vetorPessoas);
 		
 	}
