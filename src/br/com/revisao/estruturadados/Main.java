@@ -69,6 +69,10 @@ public class Main {
 		vetorPessoas.inserir(new Pessoa(4, "Bruno"));
 		vetorPessoas.inserirEm(1, new Pessoa(5, "Karla"));
 		System.out.println(vetorPessoas);
+		System.out.println("Lista de pessoas: ");
+		for(int i = 0; i < vetorPessoas.tamanho(); i++) {
+			System.out.println(vetorPessoas.recuperar(i).getNome());
+		}
 		
 	}
 }
