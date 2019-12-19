@@ -73,6 +73,11 @@ public class Main {
 		for(int i = 0; i < vetorPessoas.tamanho(); i++) {
 			System.out.println(vetorPessoas.recuperar(i).getNome());
 		}
-		
+		Pessoa p = vetorPessoas.recuperar(1);
+		Pessoa pessoaTeste = new Pessoa(100, "Teste");
+		System.out.println(vetorPessoas.contem(p));
+		System.out.println(vetorPessoas.contem(pessoaTeste));
+		System.out.println(vetorPessoas.indice(p));
+		System.out.println(vetorPessoas.indice(pessoaTeste));
 	}
 }
