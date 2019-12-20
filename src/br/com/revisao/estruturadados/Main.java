@@ -67,7 +67,8 @@ public class Main {
 		vetorPessoas.inserir(new Pessoa(2, "Juliano"));
 		vetorPessoas.inserir(new Pessoa(3, "Adriana"));
 		vetorPessoas.inserir(new Pessoa(4, "Bruno"));
-		vetorPessoas.inserirEm(1, new Pessoa(5, "Karla"));
+		vetorPessoas.inserir(new Pessoa(5, "Luciano"));
+		vetorPessoas.inserirEm(1, new Pessoa(6, "Karla"));
 		System.out.println(vetorPessoas);
 		System.out.println("Lista de pessoas: ");
 		for(int i = 0; i < vetorPessoas.tamanho(); i++) {
@@ -79,5 +80,9 @@ public class Main {
 		System.out.println(vetorPessoas.contem(pessoaTeste));
 		System.out.println(vetorPessoas.indice(p));
 		System.out.println(vetorPessoas.indice(pessoaTeste));
+		// vetorPessoas.remover(2);
+		// System.out.println(vetorPessoas.toString());
+		vetorPessoas.remover(p);
+		System.out.println(vetorPessoas.toString());		
 	}
 }
