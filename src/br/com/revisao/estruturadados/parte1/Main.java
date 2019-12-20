@@ -5,11 +5,11 @@
  * Data: 10/11/2019
 */
 
-package br.com.revisao.estruturadados;
+package br.com.revisao.estruturadados.parte1;
 
 import java.util.Scanner;
 
-import br.com.revisao.estruturadados.Pessoa;
+import br.com.revisao.estruturadados.parte1.Pessoa;
 
 public class Main {
 
