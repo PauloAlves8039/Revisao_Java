@@ -64,6 +64,10 @@ public class Main {
 		ListaLigada<Pessoa> listaPessoas = new ListaLigada<Pessoa>();
 		listaPessoas.inserir(new Pessoa(1, "Fernando"));
 		listaPessoas.inserir(new Pessoa(2, "Camila"));
+		listaPessoas.inserir(new Pessoa(3, "Daniel"));
+		listaPessoas.inserirEm(1, new Pessoa(4, "Julia"));
+		listaPessoas.inserirPrimeiro(new Pessoa(5, "Adriano"));
+		listaPessoas.inserirUltimo(new Pessoa(6, "Maria"));
 		System.out.println(listaPessoas.toString());
 	}
 
