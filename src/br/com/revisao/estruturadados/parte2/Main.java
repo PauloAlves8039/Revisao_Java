@@ -69,6 +69,13 @@ public class Main {
 		listaPessoas.inserirPrimeiro(new Pessoa(5, "Adriano"));
 		listaPessoas.inserirUltimo(new Pessoa(6, "Maria"));
 		System.out.println(listaPessoas.toString());
+		Pessoa p = listaPessoas.recuperar(1);
+		Pessoa pessoaErrada = new Pessoa(100, "Carlos");
+		System.out.println(listaPessoas.contem(p));
+		System.out.println(listaPessoas.contem(pessoaErrada));
+		System.out.println(listaPessoas.indice(p));
+		System.out.println(listaPessoas.indice(pessoaErrada));
+		
 	}
 
 }
