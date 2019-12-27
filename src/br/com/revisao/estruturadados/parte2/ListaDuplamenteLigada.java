@@ -58,6 +58,14 @@ public class ListaDuplamenteLigada<T> {
 		this.tamanho++;
 	}
 
+	public void inserirPrimeiro(T elemento) {
+		inserirEm(0, elemento);
+	}
+
+	public void inserirUltimo(T elemento) {
+		inserirEm(tamanho - 1, elemento);
+	}
+
 	public boolean estaVazia() {
 		return this.tamanho == 0;
 	}
@@ -133,5 +141,26 @@ public class ListaDuplamenteLigada<T> {
 			}
 		}
 		return resultado;
+	}
+
+	@Override
+	public String toString() {
+		if (estaVazia()) {
+			return "Lista []";
+		} else {
+			No<T> noAtual = this.primeiroNo;
+			StringBuilder sb = new StringBuilder();
+			sb.append("List [");
+			sb.append(noAtual.getElemento() != null ? noAtual.getElemento().toString() : "<NULO>");
+			sb.append(",");
+			while (noAtual.getProximo() != null) {
+				sb.append(noAtual.getProximo().getElemento() != null ? noAtual.getProximo().getElemento().toString() : "<NULO>");
+				sb.append(",");
+				noAtual = noAtual.getProximo();
+			}
+			sb.append("}");
+			return sb.toString();
+		}
+
 	}
 }
