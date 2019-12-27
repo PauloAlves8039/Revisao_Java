@@ -65,6 +65,14 @@ public class ListaDuplamenteLigada<T> {
 	public void inserirUltimo(T elemento) {
 		inserirEm(tamanho - 1, elemento);
 	}
+	
+	public T recuperar(int posicao) {
+		No<T> no = recuperarNo(posicao);
+		if (no != null) {
+			return no.getElemento();
+		}
+		return null;
+	}
 
 	public boolean estaVazia() {
 		return this.tamanho == 0;
