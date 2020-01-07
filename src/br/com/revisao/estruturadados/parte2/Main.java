@@ -10,6 +10,7 @@ package br.com.revisao.estruturadados.parte2;
 import java.util.Scanner;
 
 import br.com.revisao.estruturadados.parte1.Pessoa;
+import br.com.revisao.estruturadados.parte3.Pilha;
 
 public class Main {
 
@@ -21,6 +22,7 @@ public class Main {
 		System.out.println("1. Gerenciamento de memória");
 		System.out.println("2. Criar Lista Ligada");
 		System.out.println("3. Criar Lista Duplamente Ligada");
+		System.out.println("4. Criar Pilha");
 
 		System.out.print("Informe a opção desejada: ");
 		int opcao = input.nextInt();
@@ -36,6 +38,9 @@ public class Main {
 			break;
 		case 3:
 			criarListaDuplamenteLigada();
+			break;
+		case 4:
+			criarPilha();
 			break;
 		}
 		input.close();
@@ -112,6 +117,16 @@ public class Main {
 		for (int i = 0; i < listaPessoas.tamanho(); i++) {
 			System.out.println(listaPessoas.recuperar(i).toString());
 		}
+	}
+	
+	private static void criarPilha() {
+		Pilha<Pessoa> pilhaPessoas = new Pilha<Pessoa>();
+		System.out.println(pilhaPessoas.estaVazia());
+		pilhaPessoas.empilhar(new Pessoa(1, "João"));
+		pilhaPessoas.empilhar(new Pessoa(2, "Fernanda"));
+		pilhaPessoas.empilhar(new Pessoa(3, "Tarciana"));
+		Pessoa p1 = pilhaPessoas.desempilhar();
+		System.out.println(p1.toString());
 	}
 
 }
