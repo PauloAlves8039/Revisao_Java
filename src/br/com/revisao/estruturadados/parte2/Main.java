@@ -10,6 +10,7 @@ package br.com.revisao.estruturadados.parte2;
 import java.util.Scanner;
 
 import br.com.revisao.estruturadados.parte1.Pessoa;
+import br.com.revisao.estruturadados.parte3.Fila;
 import br.com.revisao.estruturadados.parte3.Pilha;
 
 public class Main {
@@ -23,6 +24,7 @@ public class Main {
 		System.out.println("2. Criar Lista Ligada");
 		System.out.println("3. Criar Lista Duplamente Ligada");
 		System.out.println("4. Criar Pilha");
+		System.out.println("5. Criar Fila");
 
 		System.out.print("Informe a opção desejada: ");
 		int opcao = input.nextInt();
@@ -41,6 +43,9 @@ public class Main {
 			break;
 		case 4:
 			criarPilha();
+			break;
+		case 5:
+			criarFila();
 			break;
 		}
 		input.close();
@@ -127,6 +132,18 @@ public class Main {
 		pilhaPessoas.empilhar(new Pessoa(3, "Tarciana"));
 		Pessoa p1 = pilhaPessoas.desempilhar();
 		System.out.println(p1.toString());
+	}
+	
+	private static void criarFila() {
+		Fila<Pessoa> filaPessoas = new Fila<Pessoa>();
+		System.out.println(filaPessoas.estaVazia());
+		filaPessoas.enfileirar(new Pessoa(1, "Karina"));
+		filaPessoas.enfileirar(new Pessoa(2, "Julio"));
+		System.out.println(filaPessoas.toString());
+		filaPessoas.enfileirar(new Pessoa(3, "Pedro"));
+		Pessoa p = filaPessoas.desenfileirar();
+		System.out.println(p.toString());
+		System.out.println(filaPessoas.toString());
 	}
 
 }

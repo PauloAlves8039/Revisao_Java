@@ -33,4 +33,10 @@ public class Fila<T> {
 		this.elementos.remover(0);
 		return resultado;
 	}
+
+	@Override
+	public String toString() {
+		return "Fila [" + elementos.toString() + "]";
+	}
+	
 }
