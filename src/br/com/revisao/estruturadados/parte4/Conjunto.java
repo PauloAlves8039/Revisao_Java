@@ -53,4 +53,16 @@ public class Conjunto<T> {
 		return this.elementos.indice(elemento);
 	}
 	
+	public void remover(int posicao) {
+		this.elementos.remover(posicao);
+	}
+	
+	public void remover(T elemento) {
+		this.elementos.remover(elemento);
+	}
+
+	@Override
+	public String toString() {
+		return "Conjunto [elementos=" + elementos + "]";
+	}
 }
