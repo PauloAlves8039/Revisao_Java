@@ -12,6 +12,7 @@ import java.util.Scanner;
 import br.com.revisao.estruturadados.parte1.Pessoa;
 import br.com.revisao.estruturadados.parte3.Fila;
 import br.com.revisao.estruturadados.parte3.Pilha;
+import br.com.revisao.estruturadados.parte4.Conjunto;
 
 public class Main {
 
@@ -25,6 +26,7 @@ public class Main {
 		System.out.println("3. Criar Lista Duplamente Ligada");
 		System.out.println("4. Criar Pilha");
 		System.out.println("5. Criar Fila");
+		System.out.println("6. Criar Conjunto");
 
 		System.out.print("Informe a opção desejada: ");
 		int opcao = input.nextInt();
@@ -46,6 +48,9 @@ public class Main {
 			break;
 		case 5:
 			criarFila();
+			break;
+		case 6:
+			criarConjunto();
 			break;
 		}
 		input.close();
@@ -144,6 +149,17 @@ public class Main {
 		Pessoa p = filaPessoas.desenfileirar();
 		System.out.println(p.toString());
 		System.out.println(filaPessoas.toString());
+	}
+	
+	private static void criarConjunto() {
+		Conjunto<Pessoa> conjuntoPessoas = new Conjunto<Pessoa>();
+		System.out.println(conjuntoPessoas.estaVazio());
+		System.out.println(conjuntoPessoas.inserir(new Pessoa(1, "Carol")));
+		System.out.println(conjuntoPessoas.toString());
+		System.out.println(conjuntoPessoas.inserir(new Pessoa(1, "Carol")));
+		System.out.println(conjuntoPessoas.toString());
+		System.out.println(conjuntoPessoas.inserirEm(1, new Pessoa(1, "Carol")));
+		System.out.println(conjuntoPessoas.toString());
 	}
 
 }
