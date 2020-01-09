@@ -32,6 +32,10 @@ public class Conjunto<T> {
 		}
 		return false;
 	}
+	
+	public T recuperar(int posicao) {
+		return this.elementos.recuperar(posicao);
+	}
 
 	public boolean estaVazio() {
 		return this.elementos.estaVazia();
@@ -44,4 +48,9 @@ public class Conjunto<T> {
 	public boolean contem(T elemento) {
 		return this.elementos.contem(elemento);
 	}
+	
+	public int indice(T elemento) {
+		return this.elementos.indice(elemento);
+	}
+	
 }
