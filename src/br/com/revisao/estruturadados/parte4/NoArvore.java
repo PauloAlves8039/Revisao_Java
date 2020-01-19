@@ -7,9 +7,9 @@
 
 package br.com.revisao.estruturadados.parte4;
 
-public class NoArvore<T> {
+public abstract class NoArvore<T> {
 
-	private T valor;
+	protected T valor;
 	private NoArvore<T> noEsquerdo;
 	private NoArvore<T> noDireito;
 	
@@ -39,7 +39,5 @@ public class NoArvore<T> {
 		return valor;
 	}
 	
-	public int peso() {
-		return this.valor.hashCode();
-	}
+	public abstract int peso();
 }
