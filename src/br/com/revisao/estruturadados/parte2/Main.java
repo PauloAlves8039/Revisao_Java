@@ -13,6 +13,7 @@ import br.com.revisao.estruturadados.parte1.Pessoa;
 import br.com.revisao.estruturadados.parte3.Fila;
 import br.com.revisao.estruturadados.parte3.Pilha;
 import br.com.revisao.estruturadados.parte4.Conjunto;
+import br.com.revisao.estruturadados.parte4.Mapa;
 
 public class Main {
 
@@ -27,6 +28,7 @@ public class Main {
 		System.out.println("4. Criar Pilha");
 		System.out.println("5. Criar Fila");
 		System.out.println("6. Criar Conjunto");
+		System.out.println("7. Criar Mapas");
 
 		System.out.print("Informe a opção desejada: ");
 		int opcao = input.nextInt();
@@ -51,6 +53,9 @@ public class Main {
 			break;
 		case 6:
 			criarConjunto();
+			break;
+		case 7:
+			criarMapa();
 			break;
 		}
 		input.close();
@@ -160,6 +165,23 @@ public class Main {
 		System.out.println(conjuntoPessoas.toString());
 		System.out.println(conjuntoPessoas.inserir(new Pessoa(1, "Carol")));
 		System.out.println(conjuntoPessoas.toString());
+	}
+	
+	private static void criarMapa() {
+		Mapa<String, Pessoa> mapaPessoas = new Mapa<String, Pessoa>();
+		System.out.println(mapaPessoas.toString());
+		mapaPessoas.adicionar("Legal", new Pessoa(1, "Fátima"));
+		System.out.println(mapaPessoas.toString());
+		System.out.println(mapaPessoas.contemChave("Legal"));
+		System.out.println(mapaPessoas.contemChave("Chata"));
+		mapaPessoas.adicionar("Chata", new Pessoa(2, "Mary"));
+		System.out.println(mapaPessoas.contemChave("Chata"));
+		mapaPessoas.adicionar("Legal", new Pessoa(3, "Ramirez"));
+		System.out.println(mapaPessoas.toString());
+		mapaPessoas.remover("Chata");
+		System.out.println(mapaPessoas.toString());
+		System.out.println(mapaPessoas.recuperar("Legal"));
+		// mapaPessoas.remover("Chave");
 	}
 
 }

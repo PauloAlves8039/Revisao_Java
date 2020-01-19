@@ -24,4 +24,10 @@ public class Associacao<K, V> {
 	public V getValor() {
 		return valor;
 	}
+
+	@Override
+	public String toString() {
+		return "Associacao [chave=" + chave + ", valor=" + valor + "]";
+	}
+
 }
