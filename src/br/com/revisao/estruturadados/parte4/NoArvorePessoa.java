@@ -1,7 +1,7 @@
 /*
  * Arquivo: Classe - NoArvorePessoa
  * Autor: Paulo Alves
- * Descrição: responsável por herdar elementos da classe NoArvore para representar elementos relacionado a entidade Pessoa  
+ * Descrição: responsável por herdar método peso da classe NoArvore para representar elementos relacionado a entidade Pessoa  
  * Data: 19/01/2020
 */
 
