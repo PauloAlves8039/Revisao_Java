@@ -44,4 +44,9 @@ public class Arvore<T> {
 			}
 		}
 	}
+
+	@Override
+	public String toString() {
+		return this.raiz == null ? "[(X)]" : raiz.toString();
+	}
 }

@@ -12,8 +12,10 @@ import java.util.Scanner;
 import br.com.revisao.estruturadados.parte1.Pessoa;
 import br.com.revisao.estruturadados.parte3.Fila;
 import br.com.revisao.estruturadados.parte3.Pilha;
+import br.com.revisao.estruturadados.parte4.Arvore;
 import br.com.revisao.estruturadados.parte4.Conjunto;
 import br.com.revisao.estruturadados.parte4.Mapa;
+import br.com.revisao.estruturadados.parte4.NoArvorePessoa;
 
 public class Main {
 
@@ -29,6 +31,7 @@ public class Main {
 		System.out.println("5. Criar Fila");
 		System.out.println("6. Criar Conjunto");
 		System.out.println("7. Criar Mapas");
+		System.out.println("8. Criar Árvore binária");
 
 		System.out.print("Informe a opção desejada: ");
 		int opcao = input.nextInt();
@@ -56,6 +59,9 @@ public class Main {
 			break;
 		case 7:
 			criarMapa();
+			break;
+		case 8:
+			criarArvoreBinaria();
 			break;
 		}
 		input.close();
@@ -183,5 +189,15 @@ public class Main {
 		System.out.println(mapaPessoas.recuperar("Legal"));
 		// mapaPessoas.remover("Chave");
 	}
-
+	
+	private static void criarArvoreBinaria() {
+		Arvore<Pessoa> arvorePessoas = new Arvore<Pessoa>();
+		System.out.println(arvorePessoas.toString());
+		arvorePessoas.inserir(new NoArvorePessoa(new Pessoa(5, "Paulo")));
+		System.out.println(arvorePessoas.toString());
+		arvorePessoas.inserir(new NoArvorePessoa(new Pessoa(4, "Luciano")));
+		System.out.println(arvorePessoas.toString());
+		arvorePessoas.inserir(new NoArvorePessoa(new Pessoa(6, "Rodrigo")));
+		System.out.println(arvorePessoas.toString());
+	}
 }
