@@ -15,6 +15,7 @@ import br.com.revisao.estruturadados.parte3.Pilha;
 import br.com.revisao.estruturadados.parte4.Arvore;
 import br.com.revisao.estruturadados.parte4.Conjunto;
 import br.com.revisao.estruturadados.parte4.Mapa;
+import br.com.revisao.estruturadados.parte4.NoArvore;
 import br.com.revisao.estruturadados.parte4.NoArvorePessoa;
 
 public class Main {
@@ -199,5 +200,12 @@ public class Main {
 		System.out.println(arvorePessoas.toString());
 		arvorePessoas.inserir(new NoArvorePessoa(new Pessoa(6, "Rodrigo")));
 		System.out.println(arvorePessoas.toString());
+		arvorePessoas.inserir(new NoArvorePessoa(new Pessoa(7, "Raiza")));
+		System.out.println(arvorePessoas.toString());
+		System.out.println("Busca...");
+		NoArvore<Pessoa> noPessoa6 = new NoArvorePessoa(new Pessoa(7, "Raiza"));
+		NoArvore<Pessoa> noPessoa1 = new NoArvorePessoa(new Pessoa(1, "Teste"));
+		System.out.println(arvorePessoas.buscar(noPessoa6));
+		System.out.println(arvorePessoas.buscar(noPessoa1));
 	}
 }
