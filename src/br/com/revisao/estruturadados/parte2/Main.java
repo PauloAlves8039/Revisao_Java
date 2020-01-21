@@ -202,10 +202,21 @@ public class Main {
 		System.out.println(arvorePessoas.toString());
 		arvorePessoas.inserir(new NoArvorePessoa(new Pessoa(7, "Raiza")));
 		System.out.println(arvorePessoas.toString());
+		arvorePessoas.inserir(new NoArvorePessoa(new Pessoa(8, "Cristiane")));
+		System.out.println(arvorePessoas.toString());
+		arvorePessoas.inserir(new NoArvorePessoa(new Pessoa(9, "Rafael")));
+		System.out.println(arvorePessoas.toString());
+		
 		System.out.println("Busca...");
 		NoArvore<Pessoa> noPessoa6 = new NoArvorePessoa(new Pessoa(7, "Raiza"));
-		NoArvore<Pessoa> noPessoa1 = new NoArvorePessoa(new Pessoa(1, "Teste"));
 		System.out.println(arvorePessoas.buscar(noPessoa6));
-		System.out.println(arvorePessoas.buscar(noPessoa1));
+		
+		System.out.println("********************");
+		System.out.println("***** EM ORDEM *****");
+		arvorePessoas.emOrdem();
+		System.out.println("***** PRÉ ORDEM *****");
+		arvorePessoas.preOrdem();
+		System.out.println("***** PÓS ORDEM *****");
+		arvorePessoas.posOrdem();
 	}
 }

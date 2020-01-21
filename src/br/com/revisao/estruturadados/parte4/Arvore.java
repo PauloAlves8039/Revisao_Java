@@ -70,6 +70,64 @@ public class Arvore<T> {
 			}
 		}
 	}
+	
+	public void emOrdem() {
+		this.emOrdem(this.raiz);
+	}
+	
+	public void preOrdem() {
+		this.preOrdem(this.raiz);
+	}
+	
+	public void posOrdem() {
+		this.posOrdem(this.raiz);
+	}
+	
+	private void emOrdem(NoArvore<T> ref) {
+		if(ref.getNoEsquerdo() != null) {
+			emOrdem(ref.getNoEsquerdo());
+			System.out.println(ref.getValor().toString());
+			if(ref.getNoDireito() != null) {
+				emOrdem(ref.getNoDireito());
+			}
+		}else {
+			System.out.println(ref.getValor().toString());
+			if(ref.getNoDireito() != null ) {
+				emOrdem(ref.getNoDireito());
+			}
+		}
+	}
+	
+	private void preOrdem(NoArvore<T> ref) {
+		System.out.println(ref.getValor().toString());
+		if(ref.getNoEsquerdo() != null) {
+			preOrdem(ref.getNoEsquerdo());
+			if(ref.getNoDireito() != null) {
+				preOrdem(ref.getNoDireito());
+			}
+		}else {
+			if(ref.getNoDireito() != null) {
+				preOrdem(ref.getNoDireito());
+			}
+		}
+	}
+	
+	private void posOrdem(NoArvore<T> ref) {
+		if(ref.getNoEsquerdo() != null) {
+			posOrdem(ref.getNoEsquerdo());
+			if(ref.getNoDireito() != null) {
+				posOrdem(ref.getNoDireito());
+			}
+			System.out.println(ref.getValor().toString());			
+		}else {
+			if(ref.getNoDireito() != null) {
+				posOrdem(ref.getNoDireito());
+				System.out.println(ref.getValor().toString());
+			}else {
+				System.out.println(ref.getValor().toString());
+			}
+		}
+	}
 
 	@Override
 	public String toString() {
