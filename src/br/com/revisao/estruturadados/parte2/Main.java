@@ -206,6 +206,8 @@ public class Main {
 		System.out.println(arvorePessoas.toString());
 		arvorePessoas.inserir(new NoArvorePessoa(new Pessoa(9, "Rafael")));
 		System.out.println(arvorePessoas.toString());
+		arvorePessoas.inserir(new NoArvorePessoa(new Pessoa(10, "Lorena")));
+		System.out.println(arvorePessoas.toString());
 		
 		System.out.println("Busca...");
 		NoArvore<Pessoa> noPessoa6 = new NoArvorePessoa(new Pessoa(7, "Raiza"));
@@ -218,5 +220,7 @@ public class Main {
 		arvorePessoas.preOrdem();
 		System.out.println("***** PÓS ORDEM *****");
 		arvorePessoas.posOrdem();
+		System.out.println("***** ALTURA *****");
+		System.out.println(arvorePessoas.altura());
 	}
 }
