@@ -7,14 +7,14 @@
 
 package br.com.revisao.collections.parte1;
 
-import java.util.ArrayList;
 import java.util.Iterator;
+import java.util.LinkedList;
 import java.util.List;
 
 public class Main {
 
 	public static void main(String[] args) {
-		List<Pessoa> pessoas = new ArrayList<Pessoa>();
+		List<Pessoa> pessoas = new LinkedList<Pessoa>();
 		pessoas.add(new Pessoa(1, "Paulo"));
 		pessoas.add(new Pessoa(2, "Isadora"));
 		pessoas.add(new Pessoa(3, "Aiane"));
@@ -23,14 +23,20 @@ public class Main {
 		Iterator<Pessoa> iteratorPessoa = pessoas.iterator();
 		while(iteratorPessoa.hasNext()) {
 			Pessoa p = iteratorPessoa.next();
+			if(p.getId() == 3) {
+				iteratorPessoa.remove();
+			}
 			System.out.println(p);
 		}
 		
+		System.out.println(pessoas);
+		
+		/*
 		System.out.println("Com for-each:");
 		for(Pessoa p : pessoas) {
 			System.out.println(p);
 		}
-		
+		*/
 		System.out.println("FIM!!!");
 	}
 
