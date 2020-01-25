@@ -8,6 +8,7 @@
 package br.com.revisao.collections.parte1;
 
 import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.List;
 
 public class Main {
@@ -16,7 +17,21 @@ public class Main {
 		List<Pessoa> pessoas = new ArrayList<Pessoa>();
 		pessoas.add(new Pessoa(1, "Paulo"));
 		pessoas.add(new Pessoa(2, "Isadora"));
-		System.out.println(pessoas.toString());
+		pessoas.add(new Pessoa(3, "Aiane"));
+		
+		System.out.println("Com Iterator:");
+		Iterator<Pessoa> iteratorPessoa = pessoas.iterator();
+		while(iteratorPessoa.hasNext()) {
+			Pessoa p = iteratorPessoa.next();
+			System.out.println(p);
+		}
+		
+		System.out.println("Com for-each:");
+		for(Pessoa p : pessoas) {
+			System.out.println(p);
+		}
+		
+		System.out.println("FIM!!!");
 	}
 
 }
