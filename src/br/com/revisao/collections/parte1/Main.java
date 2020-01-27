@@ -7,7 +7,7 @@
 
 package br.com.revisao.collections.parte1;
 
-import java.util.Iterator;
+// import java.util.Iterator;
 import java.util.LinkedList;
 import java.util.List;
 
@@ -20,6 +20,7 @@ public class Main {
 		pessoas.add(new Pessoa(3, "Aiane"));
 		
 		System.out.println("Com Iterator:");
+		/*
 		Iterator<Pessoa> iteratorPessoa = pessoas.iterator();
 		while(iteratorPessoa.hasNext()) {
 			Pessoa p = iteratorPessoa.next();
@@ -28,7 +29,9 @@ public class Main {
 			}
 			System.out.println(p);
 		}
+		*/
 		
+		pessoas.removeIf(p -> p.getId() == 3);
 		System.out.println(pessoas);
 		
 		/*
@@ -37,6 +40,7 @@ public class Main {
 			System.out.println(p);
 		}
 		*/
+		
 		System.out.println("FIM!!!");
 	}
 
