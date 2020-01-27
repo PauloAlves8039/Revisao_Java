@@ -19,10 +19,12 @@ public class Main {
 		pessoas.add(new Pessoa(1, "Paulo"));
 		pessoas.add(new Pessoa(5, "Luciano"));
 		pessoas.add(new Pessoa(2, "Isadora"));
+		pessoas.add(new Pessoa(6, "Pamela"));
 		pessoas.add(new Pessoa(4, "Adriana"));
+		pessoas.add(new Pessoa(7, "Bruno"));
 		pessoas.add(new Pessoa(3, "Aiane"));
 		
-		Collections.sort(pessoas);
+		Collections.sort(pessoas, new PessoaComparator());
 		
 		/*
 		System.out.println("Com Iterator:");
