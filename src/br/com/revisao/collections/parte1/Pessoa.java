@@ -7,7 +7,7 @@
 
 package br.com.revisao.collections.parte1;
 
-public class Pessoa {
+public class Pessoa implements Comparable<Pessoa> {
 
 	private int id;
 	private String nome;
@@ -65,5 +65,16 @@ public class Pessoa {
 		} else if (!nome.equals(other.nome))
 			return false;
 		return true;
+	}
+
+	@Override
+	public int compareTo(Pessoa o) {
+		if(this.getId() == o.getId()) {
+			return 0;
+		}
+		if(this.getId() < o.getId()) {
+			return -1;
+		}
+		return 1;
 	}
 }

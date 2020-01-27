@@ -7,6 +7,7 @@
 
 package br.com.revisao.collections.parte1;
 
+import java.util.Collections;
 // import java.util.Iterator;
 import java.util.LinkedList;
 import java.util.List;
@@ -16,11 +17,15 @@ public class Main {
 	public static void main(String[] args) {
 		List<Pessoa> pessoas = new LinkedList<Pessoa>();
 		pessoas.add(new Pessoa(1, "Paulo"));
+		pessoas.add(new Pessoa(5, "Luciano"));
 		pessoas.add(new Pessoa(2, "Isadora"));
+		pessoas.add(new Pessoa(4, "Adriana"));
 		pessoas.add(new Pessoa(3, "Aiane"));
 		
-		System.out.println("Com Iterator:");
+		Collections.sort(pessoas);
+		
 		/*
+		System.out.println("Com Iterator:");
 		Iterator<Pessoa> iteratorPessoa = pessoas.iterator();
 		while(iteratorPessoa.hasNext()) {
 			Pessoa p = iteratorPessoa.next();
