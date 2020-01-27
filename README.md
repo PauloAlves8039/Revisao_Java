@@ -1,5 +1,5 @@
 # Revisao_Java
-Repositório de projeto para fins acadêmicos com a linguagem Java, exemplos usados com base no cursos [Formação Desenvolvedor Java Júnior](https://www.treinaweb.com.br/formacao/desenvolvedor-java-junior). 
+Repositório de projeto para fins acadêmicos com a linguagem Java, exemplos usados com base no cursos referentes a  [Formação Desenvolvedor Java Júnior](https://www.treinaweb.com.br/formacao/desenvolvedor-java-junior). 
 
 
 # Especificações
