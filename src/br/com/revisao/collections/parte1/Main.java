@@ -7,7 +7,8 @@
 
 package br.com.revisao.collections.parte1;
 
-import java.util.Collections;
+import java.util.Comparator;
+// import java.util.Collections;
 // import java.util.Iterator;
 import java.util.LinkedList;
 import java.util.List;
@@ -24,7 +25,32 @@ public class Main {
 		pessoas.add(new Pessoa(7, "Bruno"));
 		pessoas.add(new Pessoa(3, "Aiane"));
 		
-		Collections.sort(pessoas, new PessoaComparator());
+		// Collections.sort(pessoas, new PessoaComparator());
+		
+		/*
+		pessoas.sort((o1, o2) -> {
+			if(o1.getNome().length() == o2.getNome().length()) {
+				return 0;
+			}else if(o1.getNome().length() < o2.getNome().length()) {
+				return -1;
+			}
+			return 1;
+		});
+		*/
+		
+		// pessoas.sort(Comparator.comparingInt(Pessoa::getId));
+		
+		// pessoas.sort(Comparator.naturalOrder());
+		// pessoas.sort(Comparator.reverseOrder());
+		
+		pessoas.sort(Comparator.comparing(Pessoa::getNome, (o1, o2) -> {
+			if (o1.length() == o2.length()) {
+				return 0;
+			} else if (o1.length() < o2.length()) {
+				return -1;
+			}
+			return 1;
+		}));
 		
 		/*
 		System.out.println("Com Iterator:");
