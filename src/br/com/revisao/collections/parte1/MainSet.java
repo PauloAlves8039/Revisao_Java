@@ -1,7 +1,8 @@
 package br.com.revisao.collections.parte1;
 
-import java.util.LinkedHashSet;
+// import java.util.LinkedHashSet;
 import java.util.Set;
+import java.util.TreeSet;
 
 /**
  * Classe responsável pelo ponto de entrada da aplicação referente a collection set
@@ -13,14 +14,16 @@ public class MainSet {
 
 	public static void main(String[] args) {
 		
-		Set<Pessoa> set = new LinkedHashSet<Pessoa>();
-		set.add(new Pessoa(1, "Carlos"));
+		Set<Pessoa> set = new TreeSet<Pessoa>();
 		set.add(new Pessoa(2, "Adriana"));
-		set.add(null);
+		set.add(new Pessoa(3, "Daniela"));
+		set.add(new Pessoa(1, "Carlos"));
+		// set.add(null);
 		
 		System.out.println(set);
-		set.add(new Pessoa(2, "Adriana"));
 		System.out.println(set);
+		
+		System.out.println("");
 		
 		for(Pessoa p : set) {
 			System.out.println(p);
