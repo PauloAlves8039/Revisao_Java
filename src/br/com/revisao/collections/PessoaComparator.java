@@ -5,7 +5,7 @@
  * Data: 27/01/2020
 */
 
-package br.com.revisao.collections.parte1;
+package br.com.revisao.collections;
 
 import java.util.Comparator;
 

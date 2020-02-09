@@ -5,7 +5,7 @@
  * Data: 23/01/2020
 */
 
-package br.com.revisao.collections.parte1;
+package br.com.revisao.collections;
 
 public class Pessoa implements Comparable<Pessoa> {
 

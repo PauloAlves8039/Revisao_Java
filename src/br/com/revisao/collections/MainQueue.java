@@ -1,4 +1,4 @@
-package br.com.revisao.collections.parte1;
+package br.com.revisao.collections;
 
 import java.util.PriorityQueue;
 import java.util.Queue;
