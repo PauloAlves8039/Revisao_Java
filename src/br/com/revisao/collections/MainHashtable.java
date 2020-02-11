@@ -28,6 +28,18 @@ public class MainHashtable {
 			String chave = chaves.nextElement();
 			System.out.println(" - " + tabelaPessoas.get(chave).toString());
 		}
+		
+		System.out.println();
+		
+		Pessoa p = tabelaPessoas.getOrDefault("Funcionario", new Pessoa(-1, "Não existe"));
+		System.out.println(p);
+		
+		tabelaPessoas.putIfAbsent("Funcionario", new Pessoa(1, "Amanda"));
+		System.out.println(tabelaPessoas);
+		
+		tabelaPessoas.forEach((chave, valor) -> {
+			System.out.println(String.format("[%s] %s", chave, valor.toString()));
+		});
 	}
 
 }
