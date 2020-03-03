@@ -1,6 +1,7 @@
 package br.com.revisao.collections;
 
-import java.util.HashMap;
+// import java.util.HashMap;
+import java.util.LinkedHashMap;
 import java.util.Map;
 
 /**
@@ -13,7 +14,8 @@ public class MainMap {
 
 	public static void main(String[] args) {
 		
-		Map<String, Pessoa> mapaPessoas = new HashMap<String, Pessoa>();
+		// Map<String, Pessoa> mapaPessoas = new HashMap<String, Pessoa>();
+		Map<String, Pessoa> mapaPessoas = new LinkedHashMap<String, Pessoa>(16, 0.75f, true);
 		System.out.println(mapaPessoas.put("Legal", new Pessoa(1, "Isadora")));
 		System.out.println(mapaPessoas);
 		System.out.println(mapaPessoas.put("Legal", new Pessoa(2, "Adriana")));
@@ -23,6 +25,9 @@ public class MainMap {
 		mapaPessoas.put(null, new Pessoa(-2, "NULO 2"));
 		System.out.println(mapaPessoas);
 		mapaPessoas.put("teste", null);
+		System.out.println(mapaPessoas);
+		Pessoa p = mapaPessoas.get("legal");
+		System.out.println(p);
 		System.out.println(mapaPessoas);
 	}
 
